@@ -32,6 +32,7 @@ default['kibana']['es_server'] = '127.0.0.1'
 default['kibana']['es_port'] = '9200'
 default['kibana']['es_role'] = 'elasticsearch_server'
 default['kibana']['es_scheme'] = 'http://'
+default['kibana']['web_dir'] = "#{node['kibana']['install_dir']}/current"
 
 # user to install kibana files as.  if left blank will use the default webserver user.
 default['kibana']['user'] = ''
