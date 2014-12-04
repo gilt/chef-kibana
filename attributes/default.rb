@@ -9,8 +9,8 @@ default['kibana']['git']['type'] = 'sync' # checkout | sync
 
 # Values to use for file method of installation
 default['kibana']['file']['type'] = 'tgz' # zip | tgz
-default['kibana']['file']['url'] = 'https://download.elasticsearch.org/kibana/kibana/kibana-3.1.0.tar.gz'
 default['kibana']['file']['version'] = '3.1.0' # must match version number of above
+default['kibana']['file']['url'] = "https://download.elasticsearch.org/kibana/kibana/kibana-#{node['kibana']['file']['version']}.tar.gz"
 default['kibana']['file']['checksum'] = '059a4b6b507b9ff771901d12035e499b0e8d1cae7d9e5284633e19da6c294e07' # sha256 ( shasum -a 256 FILENAME )
 
 # Which webserver to use, and webserver options.
