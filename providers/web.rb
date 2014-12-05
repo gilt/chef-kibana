@@ -53,6 +53,10 @@ action :create do
     node.set['nginx']['default_site_enabled'] = resources[:default_site_enabled]
     node.set['nginx']['install_method'] = node['kibana']['nginx']['install_method']
     @run_context.include_recipe 'nginx'
+    
+    file "#{node['nginx']['dir']}/sites-enabled/000-default" do
+      action :delete
+    end
 
     ngtp = template "#{node['nginx']['dir']}/sites-available/#{resources[:name]}" do
       source resources[:template]
