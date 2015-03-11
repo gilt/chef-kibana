@@ -2,6 +2,27 @@
 
 This file is used to list changes made in each version of kibana.
 
+## 2.0.4
+* fix tests
+* support kibana 4 official
+
+## 2.0.2
+* revert use inline resources
+
+## 2.0.0
+* change cookbook name to kibana_lwrp
+* support kibana 4 beta
+
+## 1.4.1
+* bugfix - could not update kibana because of remote_file name
+
+## 1.4.0
+* initial support for kibana4
+* removed support for kibana3 ( use 1.3.x releases )
+
+## 1.3.2:
+* mostly bugfixes
+
 ## 1.3.0:
 * big rewrite to act as library cookbook.
 * not sure if it will be backwards compat yet.
